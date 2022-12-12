@@ -18,7 +18,7 @@ class RegistrationActivity : AppCompatActivity() {
             val password= editTextPassword.text.toString()
 
             if(email.isEmpty()|| password.isEmpty()) {
-                Toast.makeText(this,"empty!",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"ცარიელია ველები",Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,password)
@@ -28,7 +28,7 @@ class RegistrationActivity : AppCompatActivity() {
 
                     }
                     else {
-                        Toast.makeText(this,"დაფიქსირდა შეცდომა",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this,"ფორმატის შეცდომა",Toast.LENGTH_SHORT).show()
                     }
                 }
 
